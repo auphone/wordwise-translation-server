@@ -20,7 +20,10 @@ node dist/index.js
 Return the number of levels available in translation server
 
 #### Respnose
-`{ level: 3 }`
+```
+{
+  level: 3 
+}```
 
 <br>
 
@@ -48,16 +51,24 @@ Filter and translate difficult words by specific level
 ### words (Required)
 Array of words to be filtered / translated
 
+<br>
+
 ### level
 Level 1-3, level 1 will translate almost all words except stop words
 Default: `1`
+
+<br>
 
 ### lang
 Any language code supported by google translate
 Default: `zh-tw`
 
+<br>
+
 ### password (Optional)
 A super simple and configurable password in `config.json` to restrict the use of translate API
+
+<br>
 
 ## Projects using this server
 https://github.com/auphone/wordwise-chrome-extension.git
@@ -67,5 +78,7 @@ ISC
 
 ## Author
 [github/auphone](https://github.com/auphone)
+
+<br>
 
 Good luck!
