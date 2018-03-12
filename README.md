@@ -50,18 +50,18 @@ Filter and translate difficult words by specific level
 
 ## Options
 #### words (Required)
-Array of words to be filtered / translated
+- Array of words to be filtered / translated
 
 #### level
-Level 1-3, level 1 will translate almost all words except stop words
-Default: `1`
+- Level 1-3, level 1 will translate almost all words except stop words
+- Default: `1`
 
 #### lang
-Any language code supported by google translate
-Default: `zh-tw`
+- Any language code supported by google translate
+- Default: `zh-tw`
 
 #### password (Optional)
-A super simple and configurable password in `config.json` to restrict the use of translate API
+- A super simple and configurable password in `config.json` to restrict the use of translate API
 
 <br>
 
