@@ -20,10 +20,11 @@ node dist/index.js
 Return the number of levels available in translation server
 
 #### Respnose
-```
+```js
 {
   level: 3 
-}```
+}
+```
 
 <br>
 
