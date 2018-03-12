@@ -1,6 +1,6 @@
 ## Installation
 ```sh
-git clone 
+git clone https://github.com/auphone/wordwise-translation-server.git
 cd wordwise-translation-server
 npm install
 ```
@@ -16,13 +16,15 @@ node dist/index.js
 ```
 
 # API
-#### GET: `/api/levels`
+### GET: `/api/levels`
 Return the number of levels available in translation server
+
 #### Respnose
 `{ level: 3 }`
 
+<br>
 
-#### POST: `/api/translate`
+### POST: `/api/translate`
 Filter and translate difficult words by specific level
 #### Request
 ```js
@@ -40,26 +42,25 @@ Filter and translate difficult words by specific level
 }
 ```
 
-## Options
-#### words
-Array of words to be filtered / translated
-**Required**
+<br>
 
-#### level
+## Options
+### words (Required)
+Array of words to be filtered / translated
+
+### level
 Level 1-3, level 1 will translate almost all words except stop words
 Default: `1`
 
-#### lang
+### lang
 Any language code supported by google translate
 Default: `zh-tw`
 
-#### password
+### password (Optional)
 A super simple and configurable password in `config.json` to restrict the use of translate API
 
-*Optional*
-
 ## Projects using this server
-(https://github.com/auphone/wordwise-chrome-extension.git)
+https://github.com/auphone/wordwise-chrome-extension.git
 
 ## License
 ISC
