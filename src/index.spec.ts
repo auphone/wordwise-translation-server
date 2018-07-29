@@ -1,28 +1,28 @@
 // tslint:disable-next-line:no-var-requires
-const config = require("../config");
+const config = require('../config');
 
-import { expect } from "chai";
-import rp from "request-promise";
+import { expect } from 'chai';
+import rp from 'request-promise';
 
-describe("start server", () => {
+describe('start server', () => {
     const url = `http://localhost:${config.server.port}`;
-    it("should run without error", () => {
-        require("./index");
+    it('should run without error', () => {
+        require('./index');
         return expect(true).true;
     });
-    it("GET: /api/levels should return level", async () => {
+    it('GET: /api/levels should return level', async () => {
         const res = await rp.get(`${url}/api/levels`);
         return expect(JSON.parse(res).level).gt(0);
     });
-    it("POST: /api/translate should block with wrong password", async () => {
+    it('POST: /api/translate should block with wrong password', async () => {
         const options = {
             body: {
-                password: "123",
-                words: ["apple"],
+                password: '123',
+                words: ['apple']
             },
             json: true,
-            method: "POST",
-            uri: `${url}/api/translate`,
+            method: 'POST',
+            uri: `${url}/api/translate`
         };
         try {
             const res = await rp(options);
@@ -31,15 +31,15 @@ describe("start server", () => {
             return expect(true).true;
         }
     });
-    it("POST: /api/translate should pass with correct password", async () => {
+    it('POST: /api/translate should pass with correct password', async () => {
         const options = {
             body: {
                 password: config.password,
-                words: ["apple"],
+                words: ['apple']
             },
             json: true,
-            method: "POST",
-            uri: `${url}/api/translate`,
+            method: 'POST',
+            uri: `${url}/api/translate`
         };
         try {
             const res = await rp(options);
